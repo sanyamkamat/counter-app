@@ -1,9 +1,28 @@
 <template>
   <div id="app">
-
+    <div>{{timerValue}}</div>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  data: () => {
+    return {
+      timerValue: 0,
+      timerId: null,
+    }
+  },
+  components: {},
+  methods:{
+    startTimer() {
+      this.timerId = setInterval(()=>{
+        this.timerValue++;
+      }, 1000);
+    },
+  },
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
