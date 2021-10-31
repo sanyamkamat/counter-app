@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div>{{timerValue}}</div>
+    <button v-on:click="startTimer">Start timer</button>
   </div>
 </template>
 
